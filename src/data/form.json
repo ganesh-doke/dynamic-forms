@@ -1,0 +1,232 @@
+{
+  "title": "Account closing form",
+  "formConfig": [
+    {
+      "stepName": "Personal Information",
+      "stepDescription": "Enter personal details",
+      "fields": [
+        {
+          "type": "text",
+          "name": "firstName",
+          "label": "First Name",
+          "placeholder": "Enter your first name",
+          "required": true,
+          "minLength": 2,
+          "maxLength": 50,
+          "regex": "^[a-zA-Z0-9,.!?\\s]+$"
+        },
+        {
+          "type": "text",
+          "name": "lastName",
+          "label": "Last Name",
+          "placeholder": "Enter your last name",
+          "required": true,
+          "minLength": 2,
+          "maxLength": 50
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Email",
+          "placeholder": "Enter your email",
+          "required": true
+        }
+      ]
+    },
+    {
+      "stepName": "Family Details",
+      "fields": [
+        {
+          "type": "radio",
+          "name": "maritalStatus",
+          "label": "Marital Status",
+          "options": [
+            {
+              "value": "single",
+              "label": "Single"
+            },
+            {
+              "value": "married",
+              "label": "Married"
+            }
+          ],
+          "required": false
+        },
+        {
+          "type": "text",
+          "name": "spouseName",
+          "label": "Spouse Name",
+          "placeholder": "Enter your spouse's name",
+          "required": false,
+          "minLength": 2,
+          "maxLength": 50,
+          "visibilityDependency": {
+            "field": "maritalStatus",
+            "value": "married"
+          }
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Spouse Email",
+          "placeholder": "Enter your email",
+          "required": false,
+          "visibilityDependency": {
+            "field": "maritalStatus",
+            "value": "married"
+          }
+        }
+      ]
+    },
+    {
+      "stepName": "Product Quantity details",
+      "fields": [
+        {
+          "type": "currency",
+          "name": "price",
+          "label": "Price",
+          "placeholder": "Enter the price",
+          "required": true
+        },
+        {
+          "type": "number",
+          "name": "quantity",
+          "label": "Quantity",
+          "placeholder": "Enter the quantity",
+          "required": true,
+          "min": 1,
+          "max": 100
+        }
+      ]
+    },
+    {
+      "stepName": "Additional details",
+      "fields": [
+        {
+          "type": "radio",
+          "name": "userType",
+          "label": "User Type",
+          "options": [
+            {
+              "value": "admin",
+              "label": "Admin"
+            },
+            {
+              "value": "user",
+              "label": "Regular User"
+            }
+          ],
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "adminCode",
+          "label": "Admin Code",
+          "placeholder": "Enter admin code",
+          "visibilityDependency": {
+            "field": "userType",
+            "value": "admin"
+          },
+          "minLength": 3,
+          "maxLength": 10,
+          "regex": "^[a-zA-Z0-9_]+$",
+          "required": true
+        },
+        {
+          "type": "select",
+          "name": "country",
+          "label": "Country",
+          "options": [
+            {
+              "value": "in",
+              "label": "India"
+            },
+            {
+              "value": "us",
+              "label": "United States"
+            },
+            {
+              "value": "ca",
+              "label": "Canada"
+            },
+            {
+              "value": "uk",
+              "label": "United Kingdom"
+            }
+          ],
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "state",
+          "label": "State/Province",
+          "placeholder": "Enter your state/province",
+          "visibilityDependency": {
+            "field": "country",
+            "value": "us"
+          },
+          "minLength": 3,
+          "maxLength": 15,
+          "regex": "^[a-zA-Z ]+$",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "postalCode",
+          "label": "Postal Code",
+          "placeholder": "Enter your postal code",
+          "visibilityDependency": {
+            "field": "country",
+            "value": "ca"
+          },
+          "minLength": 2,
+          "maxLength": 6,
+          "regex": "^[a-zA-Z ]+$",
+          "required": true
+        },
+        {
+          "type": "radio",
+          "name": "receiveUpdates",
+          "label": "Would you like to receive updates?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ],
+          "required": false
+        },
+        {
+          "type": "email",
+          "name": "emailForUpdates",
+          "label": "Email for Updates",
+          "placeholder": "Enter your email",
+          "visibilityDependency": {
+            "field": "receiveUpdates",
+            "value": "yes"
+          },
+          "required": true
+        },
+        {
+          "type": "textarea",
+          "name": "bio",
+          "label": "Bio",
+          "placeholder": "Tell us about yourself",
+          "required": false,
+          "minLength": 10,
+          "maxLength": 200,
+          "regex": "^[a-zA-Z0-9,.!?\\s]+$"
+        }
+      ]
+    },
+    {
+      "stepName": "Review & Submit",
+      "fields": [
+      ]
+    }
+  ]
+}

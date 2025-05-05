@@ -1,0 +1,161 @@
+/* Stepper Container */
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 25px 20px 25px;
+  position: relative;
+}
+
+/* Step */
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Step Circle */
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.step.active .step-circle {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Step Label */
+.step-label {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+.step.active .step-label {
+  color: #007bff;
+}
+
+/* Step Line */
+.step-line {
+  width: 300px;
+  height: 5px;
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+
+.step.active .step-line {
+  background-color: #007bff;
+}
+
+/* Navigation Buttons */
+.form-navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Form Step */
+.form-step {
+  flex-direction: column; /* Stack fields vertically */
+  justify-content: center; /* Center fields vertically */
+  align-items: center; /* Center fields horizontally */
+  width: 100%; /* Take full width of the container */
+  animation: fadeIn 0.3s ease-in-out; /* Smooth transition when step becomes active */
+}
+
+.form-step.active {
+  display: flex; /* Display the currently active step */
+}
+
+/* Fade-in animation for steps */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Back Button */
+.back-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+/* Next Button */
+.next-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+/* Review Step */
+.review-step {
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+}
+
+.review-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.review-list strong {
+  color: #007bff;
+}

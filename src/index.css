@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Shared form group styling */
+.form-group {
+  padding: 5px; /* Inner spacing */
+  justify-content: space-around;
+}
+
+/* Shared input styling */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 30%; /* Full width */
+  padding: 10px; /* Inner spacing */
+  font-size: 16px; /* Font size */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Add a subtle glow */
+}
+
+/* Mouse cursor for select, radio, and checkbox */
+.form-group select,
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+  cursor: pointer; /* Change to pointer on hover */
+}
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+  width: 5%; /* Full width */
+}
+
+/* Label styling */
+.form-group label {
+  display: block; /* Make the label a block element */
+  margin-bottom: 8px; /* Space below the label */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Dark gray color */
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-sub-title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Error message styling */
+.error {
+  font-weight: bold; /* Bold text */
+  color: red; /* Red color for errors */
+  font-size: 12px; /* Smaller font size */
+  margin-top: 4px; /* Space between input and error message */
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  font-size: 16px; /* Larger font size */
+  padding: 10px 20px; /* Padding for height and width */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Optional: Disabled button styling */
+button[type="submit"]:disabled {
+  background-color: #cccccc; /* Gray background when disabled */
+  cursor: not-allowed; /* Not-allowed cursor when disabled */
+}
