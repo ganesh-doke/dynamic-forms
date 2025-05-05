@@ -67,7 +67,7 @@
         },
         {
           "type": "email",
-          "name": "email",
+          "name": "spouse_email",
           "label": "Spouse Email",
           "placeholder": "Enter your email",
           "required": false,
