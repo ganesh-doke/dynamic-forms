@@ -15,14 +15,14 @@ code {
 /* Shared form group styling */
 .form-group {
   padding: 5px; /* Inner spacing */
-  justify-content: space-around;
+  width: 80%;
 }
 
 /* Shared input styling */
 .form-group input,
 .form-group select,
 .form-group textarea {
-  width: 30%; /* Full width */
+  width: 70%; /* Full width */
   padding: 10px; /* Inner spacing */
   font-size: 16px; /* Font size */
   border: 1px solid #ccc; /* Light gray border */

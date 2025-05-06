@@ -75,7 +75,6 @@ const DynamicForm = ({ form }) => {
     const formData = methods.getValues(); // Get all form values
     return (
       <div className="review-step">
-        <h2>Review Your Information</h2>
         {formConfig.map((step, stepIndex) => (
           <div key={stepIndex} className="review-step-section">
             {step.fields.length > 0 && <h3>{step.stepName}</h3>}

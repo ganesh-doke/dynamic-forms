@@ -6,6 +6,7 @@ const App = () => {
   return (
     <div className="App">
       <DynamicForm form={form} />
+      <br></br>
     </div>
   );
 };
